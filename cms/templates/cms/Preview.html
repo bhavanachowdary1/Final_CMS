@@ -1,0 +1,34 @@
+{% extends 'cms/base.html' %}
+{% load static %}
+{% block title %}
+Preview
+{% endblock %}
+{% block content %}
+
+
+    <div class="cont py-2 mt-3">
+        <div class="row">
+            <div class="col-lg-3 col-sm-12 col-md-5 mt-4">
+                <img src="{% static 'images/CS.jpg'%}" class="responsive" alt="course image">
+            </div>
+            <div class="col-lg-9 col-sm-12 col-md-7 mt-3">
+                <h3 id="pname"></h3><br>
+                <h5>Course credits: <span id="pcredits"></span></h5><br>
+                <h5>Description</h5>
+                <p id="des"></p>
+                <h5>Tags</h5>
+                <p id="ptags"></p>
+                <h5>Deadline : <span id="pdead"></span></h5>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-lg-8 col-md-8">
+                <div class="accordion " id="accordionExample">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="{% static 'js/Preview.js' %}"></script>
+
+{% endblock content %}

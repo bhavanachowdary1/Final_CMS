@@ -1,0 +1,26 @@
+{% extends 'cms/base.html' %}
+{% load static %}
+{% block title %}
+Create Course
+{% endblock %}
+{% block content %}
+<!-- <div class="body py-2"> -->
+    <!-- <h3 class="create my-2" style="color: rgb(0, 0, 0); text-align: center; font-weight: bold; ">Create a Course </h3> -->
+    <div class="container my-4 pb-1">
+        <h3 style="text-align:center">Create a Course</h3>
+        <form method="POST" action="" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{form.as_p}}
+            <input type="submit" value="Submit" class="btn btn-success mb-3">
+            <a href="{% url 'Catalog' %}" class="btn btn-danger mb-3">Cancel</a>
+
+            
+            <form>
+    </div>
+
+
+
+
+    {% comment %} <script src="{% static 'js/CC.js' %}"> {% endcomment %}
+    
+{% endblock %}

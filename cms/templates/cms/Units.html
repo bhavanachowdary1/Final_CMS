@@ -1,0 +1,23 @@
+{% extends 'cms/base.html' %}
+{% load static %}
+{% block title %}
+Add Units
+{% endblock %}
+{% block content %}
+<div class="container my-4 pb-1">
+
+    <form method="POST" action="" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button type="button" class="btn btn-outline-success btn-sm" id="savemp4">Save</button>
+        <br/>
+        <br/>
+        <div id="storemp4"></div>
+
+        <input type="submit" value="Submit" class="btn btn-success"></input>
+        <a href="{% url 'CC' %}" class="btn btn-danger">Back</a>
+
+        
+        <form>
+</div>
+{% endblock %}

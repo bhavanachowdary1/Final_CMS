@@ -1,0 +1,21 @@
+{% extends 'cms/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container mt-5">
+<form method="post" action="">
+    {% csrf_token %}
+    {% if form.non_field_errors%}
+        {% for error in form.non_field_errors%}
+            <p>{{error}}</p>
+        {% endfor %}
+    {% endif %}
+    {% for fm in form %}
+        {{fm.label_tag}} {{fm}} {{fm.errors|striptags}}<br></br>
+    {% endfor %}
+
+<input type="submit" value="Save" class="btn btn-primary">
+</form>
+</div>
+
+{% endblock %}
